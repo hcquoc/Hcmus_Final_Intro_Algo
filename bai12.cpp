@@ -2,7 +2,6 @@
 using namespace std;
 using ll = long long;
 
-/* --------- modpow --------- */
 ll modpow(ll a, ll e, ll mod) {
     ll r = 1;
     while (e) {
@@ -71,7 +70,6 @@ pair<ll,ll> cornacchia(ll p) {
     return {x, y};
 }
 
-/* --------- nhân Gaussian --------- */
 pair<ll,ll> mul(pair<ll,ll> A, pair<ll,ll> B) {
     return {
         llabs(A.first * B.first - A.second * B.second),
@@ -126,7 +124,6 @@ int main() {
             for (int i = 0; i < e; i++)
                 cur = mul(cur, base);
         }
-        // p ≡ 3 (mod 4) → mũ chẵn → bỏ qua
     }
 
     ll a = cur.first, b = cur.second;
