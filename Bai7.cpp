@@ -5,7 +5,6 @@
 
 using namespace std;
 
-// Prefix
 int Bai7_Prefix(int n, vector<int> &a)
 {
     vector<int> left(n), right(n);
@@ -29,6 +28,22 @@ int Bai7_Prefix(int n, vector<int> &a)
     return water;
 }
 
+int main()
+{
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    cout << Bai7_Prefix(n, a) << endl;
+    return 0;
+}
+
+
+
+// Stack
 int Bai7_Stack(int n, vector<int> &a)
 {
     stack<int> st;
@@ -50,17 +65,4 @@ int Bai7_Stack(int n, vector<int> &a)
         st.push(i);
     }
     return water;
-}
-int main()
-{
-    int n;
-    cin >> n;
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    cout << Bai7_Prefix(n, a) << endl;
-    cout << Bai7_Stack(n, a) << endl;
-    return 0;
 }
